@@ -284,15 +284,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development: Johan Sandstrom (234F8VEW43)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9K7CA73B92;
 				INFOPLIST_FILE = SqueedBrewLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = johan.SqueedBrewLab;
+				PRODUCT_BUNDLE_IDENTIFIER = squeed.squeedbrew.ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Squeedbrew Development Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,15 +304,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development: Johan Sandstrom (234F8VEW43)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9K7CA73B92;
 				INFOPLIST_FILE = SqueedBrewLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = johan.SqueedBrewLab;
+				PRODUCT_BUNDLE_IDENTIFIER = squeed.squeedbrew.ar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Squeedbrew Development Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
