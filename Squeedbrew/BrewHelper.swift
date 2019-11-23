@@ -40,4 +40,11 @@ struct BrewHelper {
     static func hideDebugViews(onArView arView: ARView) {
         arView.debugOptions = []
     }
+    
+    static func getPosition(fromIndex index: Int, cardWidth: Float) -> SIMD3<Float> {
+        let cardSpacing: Float = 0.01
+        let xPosition = (Float(index % 4) * (cardWidth + cardSpacing)) - cardWidth * 1.5
+        let zPosition = (Float(index / 4) * (cardWidth + cardSpacing)) - cardWidth * 1.5
+        return [Float(xPosition), 0, Float(zPosition)]
+    }
 }
