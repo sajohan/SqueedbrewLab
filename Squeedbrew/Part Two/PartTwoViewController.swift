@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ARKit
 import RealityKit
 
 class PartTwoViewController: UIViewController {
@@ -17,7 +18,6 @@ class PartTwoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         BrewHelper.addCoachingView(toArView: arView)
-        
     }
     
     @IBAction func didToggleDebug(_ sender: UISwitch) {
