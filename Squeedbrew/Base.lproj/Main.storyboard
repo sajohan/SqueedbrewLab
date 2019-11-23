@@ -25,8 +25,8 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMT-Q4-BEP">
-                                <rect key="frame" x="341" y="91" width="51" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="346.5" y="91" width="45.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,7 +45,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mn3-k1-yGX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Part 1" id="e7S-yC-PGf"/>
+                    <tabBarItem key="tabBarItem" title="Reality Composer" id="e7S-yC-PGf"/>
                     <connections>
                         <outlet property="arView" destination="U9f-bh-ozd" id="ntJ-n4-Ehz"/>
                     </connections>
@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="-259" y="-11"/>
         </scene>
-        <!--Item-->
+        <!--Memory-->
         <scene sceneID="Lly-wU-MaF">
             <objects>
                 <viewController id="Pjv-Gt-JM6" customClass="PartTwoViewController" customModule="Squeedbrew" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,7 +111,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hNZ-hv-bHY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Wd7-DT-JpZ"/>
+                    <tabBarItem key="tabBarItem" title="Memory" id="Wd7-DT-JpZ"/>
                     <connections>
                         <outlet property="arView" destination="6DB-Fg-B93" id="5kY-sB-fNk"/>
                     </connections>

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ARKit
 import RealityKit
 
 class PartOneViewController: UIViewController {
@@ -17,11 +18,30 @@ class PartOneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+        loadHorizontalAnchor()
+    }
+    
+    private func loadHorizontalAnchor() {
+        // Load the "Horizontal" scene from the "Experience" Reality File
+        let horizontalAnchor = try! Experience.loadHorizontal()
         
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        // Add the horizontal anchor to the scene
+        arView.scene.anchors.append(horizontalAnchor)
+    }
+    
+    private func loadFaceAnchor() {
+        guard ARFaceTrackingConfiguration.isSupported else {
+            fatalError("Not supported on device")
+        }
+        
+        let configuration = ARFaceTrackingConfiguration()
+        arView.session.run(configuration, options: [])
+        
+        // Load the "Face" scene from the "Experience" Reality File
+        let faceAnchor = try! Experience.loadFace()
+        
+        // Add the face anchor to the scene
+        arView.scene.anchors.append(faceAnchor)
     }
     
     @IBAction func didToggleDebug(_ sender: UISwitch) {
