@@ -18,6 +18,24 @@ class PartTwoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         BrewHelper.addCoachingView(toArView: arView)
+        
+        // Create an anchor that gets added to the scene when finding a 45x45 cm area
+        let horizontalAnchor = AnchorEntity(plane: .horizontal, classification: .any, minimumBounds: [0.45, 0.45])
+        arView.scene.addAnchor(horizontalAnchor)
+        
+        // Create and add a gameBoard as a child entity to the anchor
+        let gameBoard = GameBoard()
+        horizontalAnchor.addChild(gameBoard)
+        
+        // Register a TapGestureRecognizer that senses taps on the screen
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(sender:)))
+        arView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc
+    private func didTapView(sender: UITapGestureRecognizer) {
+        // The tapped point (x,y) on the screen
+        let tappedPoint = sender.location(in: arView)
     }
     
     @IBAction func didToggleDebug(_ sender: UISwitch) {
