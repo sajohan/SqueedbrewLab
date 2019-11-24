@@ -34,8 +34,7 @@ struct BrewHelper {
     
     // MARK: Hiding and showing debug
     static func showDebugViews(onArView arView: ARView) {
-        arView.debugOptions = [.showAnchorGeometry,
-                               .showAnchorOrigins,
+        arView.debugOptions = [.showAnchorOrigins,
                                .showFeaturePoints,
                                .showPhysics,
                                .showWorldOrigin]
