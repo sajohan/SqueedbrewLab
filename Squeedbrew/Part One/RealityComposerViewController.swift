@@ -1,5 +1,5 @@
 //
-//  PartOneViewController.swift
+//  RealityComposerViewController.swift
 //  Squeedbrew
 //
 //  Created by Johan Sandström on 2019-11-17.
@@ -11,7 +11,7 @@ import UIKit
 import ARKit
 import RealityKit
 
-class PartOneViewController: UIViewController {
+class RealityComposerViewController: UIViewController {
     
     @IBOutlet var arView: ARView!
     

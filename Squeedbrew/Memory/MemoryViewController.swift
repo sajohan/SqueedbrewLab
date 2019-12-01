@@ -1,5 +1,5 @@
 //
-//  PartTwoViewController.swift
+//  MemoryViewController.swift
 //  Squeedbrew
 //
 //  Created by Johan Sandström on 2019-11-17.
@@ -11,7 +11,7 @@ import UIKit
 import ARKit
 import RealityKit
 
-class PartTwoViewController: UIViewController {
+class MemoryViewController: UIViewController {
     
     @IBOutlet var arView: ARView!
     
