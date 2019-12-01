@@ -26,4 +26,16 @@ class Card: Entity, HasModel {
         let material = SimpleMaterial(color: cardColor, isMetallic: true)
         components[ModelComponent] = ModelComponent(mesh: mesh, materials: [material])
     }
+    
+    private func rotate(toAngle angle: Float, animated: Bool) {
+        // Copy current transform and change rotation
+        var rotatedTransform = transform
+        rotatedTransform.rotation = simd_quatf(angle: angle, axis: [1, 0, 0])
+        
+        if animated {
+            move(to: rotatedTransform, relativeTo: parent, duration: 0.3, timingFunction: .easeInOut)
+        } else {
+            transform = rotatedTransform
+        }
+    }
 }
