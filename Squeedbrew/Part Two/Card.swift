@@ -27,6 +27,7 @@ class Card: Entity, HasModel {
         components[ModelComponent] = ModelComponent(mesh: mesh, materials: [material])
     }
     
+    /// Rotates the card to the specified angle
     private func rotate(toAngle angle: Float, animated: Bool) {
         // Copy current transform and change rotation
         var rotatedTransform = transform
@@ -37,5 +38,14 @@ class Card: Entity, HasModel {
         } else {
             transform = rotatedTransform
         }
+    }
+    
+    /// Scales the passed in modelEntity up or down to match width
+    private func setMaxBaseWidth(_ width: Float, forModelEntity entity: ModelEntity) {
+        let xDimension = entity.model!.mesh.bounds.extents.x
+        let zDimension = entity.model!.mesh.bounds.extents.z
+        let maxWidth = Float.maximum(xDimension, zDimension)
+        let scale = width / maxWidth
+        entity.scale = [scale, scale, scale]
     }
 }

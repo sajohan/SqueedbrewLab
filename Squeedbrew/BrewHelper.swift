@@ -9,7 +9,6 @@
 import Foundation
 import ARKit
 import RealityKit
-import Combine
 
 struct BrewHelper {
     
@@ -43,33 +42,5 @@ struct BrewHelper {
     
     static func hideDebugViews(onArView arView: ARView) {
         arView.debugOptions = []
-    }
-    
-    // MARK: Loading 3D models
-    static var loadRequest: AnyCancellable?
-    static func loadModels(completed: @escaping ([ModelEntity]) -> Void) {
-        loadRequest = Entity.loadModelAsync(named: "chair_swan")
-            .append(Entity.loadModelAsync(named: "fender_stratocaster"))
-            .append(Entity.loadModelAsync(named: "gramophone"))
-            .append(Entity.loadModelAsync(named: "teapot"))
-            .append(Entity.loadModelAsync(named: "toy_biplane"))
-            .append(Entity.loadModelAsync(named: "toy_car"))
-            .append(Entity.loadModelAsync(named: "toy_drummer"))
-            .append(Entity.loadModelAsync(named: "tv_retro"))
-            .append(Entity.loadModelAsync(named: "toy_robot_vintage"))
-            .collect()
-            .sink(receiveCompletion: { receiveCompletion in
-                // Do nothing
-            }) { (models) in
-                completed(models)
-        }
-    }
-    
-    static func setMaxBaseWidth(_ width: Float, forModelEntity entity: ModelEntity) {
-        let xDimension = entity.model!.mesh.bounds.extents.x
-        let zDimension = entity.model!.mesh.bounds.extents.z
-        let maxWidth = Float.maximum(xDimension, zDimension)
-        let scale = width / maxWidth
-        entity.scale = [scale, scale, scale]
     }
 }
