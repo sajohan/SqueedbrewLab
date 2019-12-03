@@ -98,7 +98,7 @@
 		04FB9F3423819F8100C7DF06 /* Squeedbrew */ = {
 			isa = PBXGroup;
 			children = (
-				04FB9F4C2381A4CD00C7DF06 /* Part One */,
+				04FB9F4C2381A4CD00C7DF06 /* Reality Composer */,
 				04FB9F4B2381A4C200C7DF06 /* Memory */,
 				04FB9F3523819F8100C7DF06 /* AppDelegate.swift */,
 				04FB9F4D2381A4FE00C7DF06 /* BrewHelper.swift */,
@@ -121,13 +121,13 @@
 			path = Memory;
 			sourceTree = "<group>";
 		};
-		04FB9F4C2381A4CD00C7DF06 /* Part One */ = {
+		04FB9F4C2381A4CD00C7DF06 /* Reality Composer */ = {
 			isa = PBXGroup;
 			children = (
 				04FB9F3723819F8100C7DF06 /* RealityComposerViewController.swift */,
 				04FB9F3923819F8100C7DF06 /* Experience.rcproject */,
 			);
-			path = "Part One";
+			path = "Reality Composer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
